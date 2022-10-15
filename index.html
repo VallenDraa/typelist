@@ -4,55 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <script src="./dist/main.js" type="module"></script>
+    <script src="./dist/main.js" type="module" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Typelist</title>
   </head>
   <body
-    class="container max-w-2xl sm:px-5 mx-auto bg-gradient-to-tr from-blue-800 via-fuchsia-900 to-slate-900"
+    class="w-full max-w-2xl sm:px-5 mx-auto bg-gradient-to-tr from-sky-700 via-fuchsia-900 to-zinc-700"
   >
     <header
-      class="mx-5 my-3 px-5 py-3 rounded-2xl bg-white/20 backdrop-blur-md space-y-3"
+      class="mx-5 my-3 px-5 py-3 rounded-2xl bg-zinc-800/20 backdrop-blur-md space-y-3"
     >
-      <h1 class="text-5xl font-extrabold text-slate-900">Typelist</h1>
-      <h2 class="text-xl font-medium text-slate-800">
-        What are you going to do today ?
-      </h2>
+      <h1 class="text-5xl font-extrabold text-zinc-100">Typelist</h1>
+      <h2 class="text-lg text-zinc-200">What are you going to do today ?</h2>
     </header>
     <footer
-      class="mx-5 my-3 rounded-2xl bg-white/20 backdrop-blur-md overflow-clip"
+      class="mx-5 my-3 rounded-2xl bg-zinc-800/20 backdrop-blur-md overflow-clip"
     >
       <header
-        class="sticky top-0 px-5 py-3 bg-gray-400/30 backdrop-blur-md space-y-3 z-10"
+        class="sticky top-0 px-5 py-3 bg-zinc-700/30 backdrop-blur-md space-y-3 z-10"
       >
         <div class="flex justify-between items-center">
-          <h3 class="text-xl text-slate-800 font-bold">Your To-Do List</h3>
+          <h3 class="text-xl text-zinc-300 font-bold">Your To-Do List</h3>
           <button
-            type="submit"
-            class="py-1 px-4 ml-auto text-sm transition-colors duration-200 bg-indigo-600 hover:bg-indigo-500 focus:ring-2 focus:ring-indigo-400 disabled:bg-indigo-300 rounded-full text-gray-100"
+            id="toggle-form-btn"
+            type="button"
+            class="py-1 px-4 ml-auto text-sm transition-colors duration-200 bg-indigo-600 hover:bg-indigo-500 focus:ring-2 focus:ring-indigo-400 disabled:bg-indigo-300 rounded-full text-zinc-100"
           >
             Toggle Form
           </button>
         </div>
-        <form class="flex flex-col gap-2">
+        <form id="todo-form" class="space-y-2 hidden">
           <div class="flex flex-col gap-2">
             <input
               type="text"
-              class="rounded-md px-5 py-1 outline-none duration-200 focus:ring-4 focus:ring-indigo-600"
+              class="rounded-md px-5 py-1 outline-none duration-200 bg-zinc-700 placeholder:text-zinc-500 text-white border-[1px] border-zinc-600 focus:ring-1 focus:ring-indigo-600"
               placeholder="New To-Do title"
             />
             <textarea
               placeholder="Write To-Do"
-              class="rounded-md px-5 py-1 outline-none duration-200 focus:ring-4 focus:ring-indigo-600"
+              class="rounded-md px-5 py-1 outline-none duration-200 bg-zinc-700 placeholder:text-zinc-500 text-white border-[1px] border-zinc-600 focus:ring-1 focus:ring-indigo-600"
               cols="10"
             >
             </textarea>
           </div>
           <button
             type="submit"
-            disabled
-            class="py-1 px-4 ml-auto text-sm transition-colors duration-200 bg-blue-600 hover:bg-blue-500 focus:ring-2 focus:ring-blue-400 disabled:bg-blue-300 rounded-full text-gray-100"
+            class="py-1 px-4 text-sm transition-colors duration-200 bg-blue-600 hover:bg-blue-500 focus:ring-2 focus:ring-blue-400 disabled:bg-blue-300 rounded-full text-zinc-100"
           >
             Add To-Do
           </button>
@@ -60,13 +57,13 @@
       </header>
 
       <footer class="pb-5">
-        <ul class="space-y-3 px-5 py-2 h-96 overflow-y-auto">
-          <li class="bg-white/30 p-3 rounded-2xl backdrop-blur-md space-y-3">
+        <ul id="list" class="space-y-3 px-5 py-2 h-96 overflow-y-auto">
+          <li class="bg-zinc-800/30 p-3 rounded-2xl backdrop-blur-md space-y-3">
             <div>
-              <span class="text-3xl font-extrabold text-indigo-700"
+              <span class="text-3xl font-extrabold text-sky-700"
                 >Hello world</span
               >
-              <p class="text-gray-800 pt-2">
+              <p class="text-zinc-200/60 pt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae omnis esse eius amet harum commodi nemo consequuntur
                 dolor cumque error!
@@ -76,18 +73,18 @@
               <input type="checkbox" />
               <button
                 type="button"
-                class="py-1 px-4 text-sm transition-colors duration-200 bg-red-600 hover:bg-red-500 focus:ring-2 focus:ring-red-400 rounded-full text-gray-100"
+                class="py-1 px-4 text-sm transition-colors duration-200 bg-red-600 hover:bg-red-500 focus:ring-2 focus:ring-red-400 rounded-full text-zinc-100"
               >
                 Remove
               </button>
             </div>
           </li>
-          <li class="bg-white/30 p-3 rounded-2xl backdrop-blur-md space-y-3">
+          <li class="bg-zinc-800/30 p-3 rounded-2xl backdrop-blur-md space-y-3">
             <div>
-              <span class="text-3xl font-extrabold text-indigo-700"
+              <span class="text-3xl font-extrabold text-sky-700"
                 >Hello world</span
               >
-              <p class="text-gray-800 pt-2">
+              <p class="text-zinc-200/60 pt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae omnis esse eius amet harum commodi nemo consequuntur
                 dolor cumque error!
@@ -97,18 +94,18 @@
               <input type="checkbox" />
               <button
                 type="button"
-                class="py-1 px-4 text-sm transition-colors duration-200 bg-red-600 hover:bg-red-500 focus:ring-2 focus:ring-red-400 rounded-full text-gray-100"
+                class="py-1 px-4 text-sm transition-colors duration-200 bg-red-600 hover:bg-red-500 focus:ring-2 focus:ring-red-400 rounded-full text-zinc-100"
               >
                 Remove
               </button>
             </div>
           </li>
-          <li class="bg-white/30 p-3 rounded-2xl backdrop-blur-md space-y-3">
+          <li class="bg-zinc-800/30 p-3 rounded-2xl backdrop-blur-md space-y-3">
             <div>
-              <span class="text-3xl font-extrabold text-indigo-700"
+              <span class="text-3xl font-extrabold text-sky-700"
                 >Hello world</span
               >
-              <p class="text-gray-800 pt-2">
+              <p class="text-zinc-200/60 pt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae omnis esse eius amet harum commodi nemo consequuntur
                 dolor cumque error!
@@ -118,18 +115,18 @@
               <input type="checkbox" />
               <button
                 type="button"
-                class="py-1 px-4 text-sm transition-colors duration-200 bg-red-600 hover:bg-red-500 focus:ring-2 focus:ring-red-400 rounded-full text-gray-100"
+                class="py-1 px-4 text-sm transition-colors duration-200 bg-red-600 hover:bg-red-500 focus:ring-2 focus:ring-red-400 rounded-full text-zinc-100"
               >
                 Remove
               </button>
             </div>
           </li>
-          <li class="bg-white/30 p-3 rounded-2xl backdrop-blur-md space-y-3">
+          <li class="bg-zinc-800/30 p-3 rounded-2xl backdrop-blur-md space-y-3">
             <div>
-              <span class="text-3xl font-extrabold text-indigo-700"
+              <span class="text-3xl font-extrabold text-sky-700"
                 >Hello world</span
               >
-              <p class="text-gray-800 pt-2">
+              <p class="text-zinc-200/60 pt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae omnis esse eius amet harum commodi nemo consequuntur
                 dolor cumque error!
@@ -139,7 +136,7 @@
               <input type="checkbox" />
               <button
                 type="button"
-                class="py-1 px-4 text-sm transition-colors duration-200 bg-red-600 hover:bg-red-500 focus:ring-2 focus:ring-red-400 rounded-full text-gray-100"
+                class="py-1 px-4 text-sm transition-colors duration-200 bg-red-600 hover:bg-red-500 focus:ring-2 focus:ring-red-400 rounded-full text-zinc-100"
               >
                 Remove
               </button>

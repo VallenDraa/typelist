@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
     /* Language and Environment */
-    "target": "ES5",
-    "module": "commonjs",
+    "target": "ES6",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "alwaysStrict": true,
     "skipLibCheck": true,
     "rootDir": "./src/scripts",
-    "outDir": "./src/dist"
+    "outDir": "dist"
   }
 }
