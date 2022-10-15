@@ -1,3 +1,5 @@
-#CRUD-TYPESCRIPT
+# Crud Typescript
 
-Simple typescript to-do list website
+A simple to-do list website made with **Tailwind css** and **Typescript**.
+
+
